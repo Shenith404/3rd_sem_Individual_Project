@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+H0kB7pG+XXpnTlhdGdYuvtVhJC5Jzi9NSzocVXzA+rv0X7FFNv2V1Dwx6MSxe5IYvBz2Eng5+YqneI9lAgHXg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SHENITH\\Desktop\\Desktop01\\LMS\\LMS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SHENITH\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.0-preview1\\communitytoolkit.mvvm.8.2.0-preview1.nupkg.sha512"
+  ],
+  "logs": []
+}

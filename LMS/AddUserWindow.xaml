@@ -1,0 +1,62 @@
+﻿<Window x:Class="Desktop01.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Desktop01"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Title="{Binding Title,UpdateSourceTrigger=PropertyChanged}" Height="550" Width="320">
+    <Window.DataContext>
+        <local:AddUserVM/>
+    </Window.DataContext>
+    
+
+
+    <Grid>
+      
+        <StackPanel
+            Width="300" Height="530" 
+            VerticalAlignment="Top" Orientation="Vertical" Margin=" -8 0 0 0">
+            
+            <TextBlock Margin="0 10 10 0" Height="20" FontSize="15" TextAlignment="Center" Foreground="Blue"  Text="{Binding Title,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Width="200"/>
+            <Image Width="80" Height="80" x:Name="img" Margin="0 20 0 20"  Source="{Binding SelectedImage}" >
+            
+            </Image>
+            <Button  Height="40" Width="40" BorderThickness="0" Background="Transparent" HorizontalAlignment="Center" Command="{Binding UploadPhotoCommand}"   VerticalAlignment="Bottom" >
+                <StackPanel>
+                    <Image  Source="/Model/Images/pe.png"></Image>
+                </StackPanel>
+            </Button>
+            <TextBlock Text="Index No:(you can't Edit this !)" Style="{StaticResource Atextblock}"/>
+            <TextBox Text="{Binding Index,UpdateSourceTrigger=PropertyChanged}" Tag="You cant Edit this"  IsReadOnly="True" Style="{StaticResource Atextbox }" />
+
+            <TextBlock Text="First Name:" Style="{StaticResource Atextblock}"/>
+            <TextBox Text="{Binding Firstname, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Atextbox }" />
+            <TextBlock Text="Last Name:" Style="{StaticResource Atextblock}"/>
+            <TextBox Text="{Binding Lastname, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Atextbox }"/>
+            <TextBlock Text="Age:" Style="{StaticResource Atextblock}"/>
+            <TextBox Text="{Binding Age, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Atextbox }"/>
+            <TextBlock Text="DateOfBirth(dd/mm/yyyy):" Style="{StaticResource Atextblock}"/>
+            <TextBox Text="{Binding Dateofbirth, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource Atextbox }"/>
+            <TextBlock Text="GPA" Style="{StaticResource Atextblock}"/>
+            <TextBox Text="{Binding Gpa,UpdateSourceTrigger=Default}" Style="{StaticResource Atextbox}" ></TextBox>
+
+            <Button Content="Save" Command="{Binding SaveCommand}" Style="{StaticResource savebtn}"
+                    
+                    >
+            
+                
+            </Button>
+
+
+        </StackPanel>
+        <StackPanel Width="300" Height="200" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+            <Button Content="X" Width="19" Command="{Binding closeCommand}" Background="Transparent" Foreground="Red" BorderThickness="0" BorderBrush="Red" HorizontalAlignment="Right"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
